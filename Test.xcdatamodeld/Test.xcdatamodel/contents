@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1421" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AlcoholPlan" representedClassName=".AlcoholPlan" syncable="YES">
+        <attribute name="alcoholContent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="drinkType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalCarbs" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="hasMealPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MealItems" inverseName="hasAlcoholPlan" inverseEntity="MealItems" syncable="YES"/>
+    </entity>
+    <entity name="BodyWeight" representedClassName=".BodyWeight" syncable="YES">
+        <attribute name="currentWeight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="setDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="EndocrineSettings" representedClassName=".EndocrineSettings" syncable="YES">
+        <attribute name="endTime1" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime2" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime3" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isCF" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isICR" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isTBG" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="setDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime1" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime2" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime3" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="value1a" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value1b" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value2a" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value2b" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value3a" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value3b" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value24a" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value24b" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ExercisePlan" representedClassName=".ExercisePlan" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="intensity" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasInsulinPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InsulinPlan" inverseName="hasExercisePlan" inverseEntity="InsulinPlan" syncable="YES"/>
+    </entity>
+    <entity name="FaveMeal" representedClassName=".FaveMeal" syncable="YES">
+        <attribute name="carbs" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="metric" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="InsulinPlan" representedClassName=".InsulinPlan" syncable="YES">
+        <attribute name="carbsConsumed" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="correctionFactor" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="currentBG" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="deliveredInsulin" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="foodPhoto" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="insulinCarbRatio" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="insulinOnBoard" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="recommendedCarbs" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="recommendedInsulin" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="targetBG_High" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="targetBG_Low" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalMealCarbs" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="hasExercisePlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExercisePlan" inverseName="hasInsulinPlan" inverseEntity="ExercisePlan" syncable="YES"/>
+        <relationship name="hasMealItems" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MealItems" inverseName="hasInsulinPlan" inverseEntity="MealItems" syncable="YES"/>
+    </entity>
+    <entity name="MealItems" representedClassName=".MealItems" syncable="YES">
+        <attribute name="foodAmount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="foodCarbs" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="foodMeasure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasAlcoholPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AlcoholPlan" inverseName="hasMealPlan" inverseEntity="AlcoholPlan" syncable="YES"/>
+        <relationship name="hasInsulinPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InsulinPlan" inverseName="hasMealItems" inverseEntity="InsulinPlan" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AlcoholPlan" positionX="-128" positionY="-801" width="128" height="105"/>
+        <element name="BodyWeight" positionX="-524" positionY="-804" width="128" height="75"/>
+        <element name="EndocrineSettings" positionX="-713" positionY="-729" width="128" height="315"/>
+        <element name="ExercisePlan" positionX="-524" positionY="-648" width="128" height="88"/>
+        <element name="FaveMeal" positionX="-324" positionY="-807" width="128" height="105"/>
+        <element name="InsulinPlan" positionX="-324" positionY="-655" width="128" height="270"/>
+        <element name="MealItems" positionX="-135" positionY="-601" width="128" height="135"/>
+    </elements>
+</model>
